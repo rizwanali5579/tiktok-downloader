@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TikTok Downloader</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>TikTok Video Downloader</h2>
+  <input id="url" type="text" placeholder="Paste TikTok video URL">
+  <button onclick="download()">Download</button>
+
+  <script>
+    function download() {
+      let url = document.getElementById("url").value;
+      if (!url) return alert("Paste TikTok URL first!");
+      window.open(`https://snaptik.app/abc?url=${encodeURIComponent(url)}`);
+    }
+  </script>
+</body>
+</html>
